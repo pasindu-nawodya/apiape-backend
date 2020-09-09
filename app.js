@@ -5,6 +5,8 @@ const bodyparser = require('body-parser');
 const cors = require('cors');
 require('dotenv/config');
 
+var PORT = process.env.PORT || 4000;
+
 
 //import routes
 const userRoute = require('./Routes/users');
@@ -39,4 +41,4 @@ mongoose.connect(
     ()=>console.log('Database connected!')
 )
 
-app.listen(4000);
+app.listen(PORT);
